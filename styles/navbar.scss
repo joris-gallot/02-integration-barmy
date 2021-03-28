@@ -1,0 +1,40 @@
+.navbar {
+  margin-top: 3rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+  .list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    li {
+      margin-left: 3rem;
+      font-size: 24px;
+      cursor: pointer;
+      position: relative;
+
+      &:first-child {
+        margin: 0;
+      }
+
+      &:hover::before {
+        position: absolute;
+        height: 100%;
+        top: .6rem;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-size: contain;
+        background-image: url('../images/hover-menu.png');;
+        content: '';
+      }
+    }
+  }
+}

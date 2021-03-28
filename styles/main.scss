@@ -1,6 +1,14 @@
+@import 'reset';
 @import 'fonts';
+@import 'navbar';
+@import 'hero';
 
-p {
-  color: red;
+* {
   font-family: 'outrun_futureregular';
+}
+
+html {
+  background-color: black;
+  color: white;
+  overflow-x: hidden;
 }

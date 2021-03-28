@@ -1,0 +1,45 @@
+.hero {
+  height: 100vh;
+  background-image: url('../images/bg-photo.png');
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .watch-more {
+    background-color: white;
+    color: black;
+    padding: .5rem 2rem .8rem 2rem;
+    border: none;
+  }
+
+  .barmy-title {
+    margin-bottom: 1.5rem;
+  }
+
+  .watch-more-btn {
+    margin-top: 7rem;
+    position: relative;
+    cursor: pointer;
+
+    span {
+      position: absolute;
+      top: 20%;
+      left: 27%;
+      color: black;
+      font-size: 18px;
+    }
+  }
+
+  .fade-bottom-bg-container {
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+    overflow: hidden;
+    height: 14rem;
+
+    img {
+      margin-top: -.4rem;
+    }
+  }
+}
