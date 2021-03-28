@@ -1,0 +1,48 @@
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 900px;
+  padding: 0 17rem;
+  background-image: url('../images/about-bg-img.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  .images {
+    position: relative;
+    width: 740px;
+    height: 580px;
+    background-image: url('../images/about-img-01.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    .image-02 {
+      position: absolute;
+      top: 15rem;
+      left: -6rem;
+    }
+  }
+
+  .description {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10rem;
+
+    .about-title {
+      font-size: 24px;
+      color: $lightblue;
+    }
+
+    .title {
+      font-size: 60px;
+      margin-bottom: 5rem;
+    }
+
+    .text {
+      font-size: 14px;
+      font-family: 'Montserrat', sans-serif;
+      line-height: 2.5rem;
+    }
+  }
+}
