@@ -190,6 +190,101 @@ table {
   line-height: 2.5rem;
 }
 
+.carousel {
+  height: 870px;
+  position: relative;
+  overflow-x: hidden;
+}
+.carousel .go-to {
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 300ms ease;
+}
+.carousel .go-to:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.carousel .go-to:hover svg {
+  color: white;
+}
+.carousel .go-to svg {
+  transition: color 300ms ease;
+  color: rgba(255, 255, 255, 0.6);
+  width: 30px;
+  height: 30px;
+}
+.carousel .next {
+  position: absolute;
+  right: 0;
+  transform: rotate(180deg);
+}
+.carousel .previous {
+  position: absolute;
+  left: 0;
+}
+.carousel .slider {
+  width: 100%;
+  height: 100%;
+}
+.carousel .slider .item {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 1s ease;
+}
+.carousel .slider .item .slide {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.carousel .slider .item .slide .credit {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 0.5rem;
+  position: absolute;
+  bottom: 1rem;
+  right: 8rem;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 0.2rem;
+  font-size: 12px;
+  color: lightgray;
+}
+.carousel .slider .item .slide .credit a {
+  color: #95a7ff;
+  font-family: "Montserrat", sans-serif;
+}
+.carousel .slider .item .slide-01 {
+  background-image: url("../images/carousel-01.jpeg");
+  background-size: cover;
+}
+.carousel .slider .item .slide-02 {
+  background-image: url("../images/carousel-02.jpg");
+  background-size: cover;
+}
+.carousel .slider .item .slide-03 {
+  background-image: url("../images/carousel-03.jpg");
+  background-size: cover;
+}
+.carousel .slider .item .slide-04 {
+  background-image: url("../images/carousel-04.jpg");
+  background-size: cover;
+}
+.carousel .item-after {
+  transform: translateX(100%);
+}
+.carousel .item-before {
+  transform: translateX(-100%);
+}
+.carousel .item-active {
+  z-index: 4;
+}
+
 * {
   font-family: "outrun_futureregular";
 }
