@@ -193,7 +193,6 @@ table {
 .carousel {
   height: 870px;
   position: relative;
-  overflow-x: hidden;
 }
 .carousel .go-to {
   height: 100%;
@@ -227,6 +226,55 @@ table {
   position: absolute;
   left: 0;
 }
+.carousel .images-list {
+  z-index: 10;
+  position: absolute;
+  bottom: -8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.carousel .images-list .image {
+  width: 350px;
+  height: 250px;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: relative;
+}
+.carousel .images-list .image::after {
+  content: "";
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.carousel .images-list .image01 {
+  background-image: url("../images/carousel-01.jpeg");
+  background-size: cover;
+}
+.carousel .images-list .image02 {
+  background-image: url("../images/carousel-02.jpg");
+  background-size: cover;
+}
+.carousel .images-list .image03 {
+  background-image: url("../images/carousel-03.jpg");
+  background-size: cover;
+}
+.carousel .images-list .image04 {
+  background-image: url("../images/carousel-04.jpg");
+  background-size: cover;
+}
+.carousel .images-list .image-active {
+  border: 8px #ff4e3e solid;
+}
+.carousel .images-list .image-active::after {
+  content: "";
+  background-color: transparent;
+}
 .carousel .slider {
   width: 100%;
   height: 100%;
@@ -243,13 +291,39 @@ table {
   height: 100%;
   width: 100%;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel .slider .item .slide::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.carousel .slider .item .slide .lorem {
+  z-index: 5;
+  max-width: 45rem;
+  text-align: center;
+}
+.carousel .slider .item .slide .lorem h3 {
+  font-size: 45px;
+  margin-bottom: 4rem;
+}
+.carousel .slider .item .slide .lorem p {
+  line-height: 2rem;
+  font-family: "Montserrat", sans-serif;
 }
 .carousel .slider .item .slide .credit {
   background-color: rgba(0, 0, 0, 0.6);
   padding: 0.5rem;
   position: absolute;
-  bottom: 1rem;
+  bottom: 9rem;
   right: 8rem;
+  z-index: 5;
   font-family: "Montserrat", sans-serif;
   border-radius: 0.2rem;
   font-size: 12px;
@@ -285,8 +359,58 @@ table {
   z-index: 4;
 }
 
+.footer {
+  padding: 4rem 0;
+  position: relative;
+  height: 905px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url("../images/footer-img.png");
+  background-size: cover;
+}
+.footer .fade-bottom-bg-container {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  overflow: hidden;
+  height: 20rem;
+}
+.footer .all-right {
+  z-index: 5;
+  margin-top: 5rem;
+  color: #313131;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer .all-right .icons-ref {
+  margin-top: 2rem;
+}
+.footer .join-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer .join-us .join-us-btn {
+  position: relative;
+  cursor: pointer;
+  color: #ff4e3e;
+  margin-top: 3rem;
+}
+.footer .join-us .join-us-btn span {
+  position: absolute;
+  top: 20%;
+  left: 35%;
+  font-size: 18px;
+}
+
 * {
   font-family: "outrun_futureregular";
+}
+
+.link {
+  color: #ff4e3e;
 }
 
 html {

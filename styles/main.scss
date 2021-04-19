@@ -5,9 +5,14 @@
 @import 'hero';
 @import 'about';
 @import 'carousel';
+@import 'footer';
 
 * {
   font-family: 'outrun_futureregular';
+}
+
+.link {
+  color: $primary;
 }
 
 html {
