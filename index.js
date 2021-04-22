@@ -14,13 +14,6 @@ document.getElementById('go-to-next').addEventListener('click', () => {
   setClasses()
 })
 
-Array.from(smallSlides).forEach((el, i) => {
-  el.addEventListener('click', () => {
-    activeIndex = i
-    setClasses()
-  })
-})
-
 document.getElementById('go-to-previous').addEventListener('click', () => {
   if (activeIndex === 0) {
     activeIndex = slides.length - 1
@@ -28,6 +21,13 @@ document.getElementById('go-to-previous').addEventListener('click', () => {
     activeIndex--
   }
   setClasses()
+})
+
+Array.from(smallSlides).forEach((el, i) => {
+  el.addEventListener('click', () => {
+    activeIndex = i
+    setClasses()
+  })
 })
 
 function setClasses() {
